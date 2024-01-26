@@ -12,24 +12,16 @@
 
 #include "ft_printf.h"
 
-static void	ft_putchar2(char c)
+static int	ft_putchar2(char c)
 {
 	write(1, &c, 1);
+	return (1);
 }
 
-int	ft_puthexa(uintptr_t num, char *base)
+int	ft_puthexa(unsigned int num, char *base)
 {
-	static int	i;
-
-	if (num >= 0 && num < 16)
-	{
-		ft_putchar2(base[num]);
-		i++;
-	}
+	if (num < 16)
+		return (ft_putchar2(base[num]));
 	else
-	{
-		ft_puthexa(num / 16, base);
-		ft_puthexa(num % 16, base);
-	}
-	return (i);
+		return (ft_puthexa(num / 16, base) + ft_puthexa(num % 16, base));
 }

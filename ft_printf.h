@@ -16,6 +16,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stddef.h>
+# include <stdint.h>
 
 typedef struct s_formats{
 	char	spec;
@@ -27,6 +28,10 @@ int		ft_putchar(const char *format, va_list args);
 int		ft_putstr(const char *format, va_list args);
 int		ft_putpercent(const char *format, va_list args);
 int		ft_putaddress(const char *format, va_list args);
-int		ft_puthexa(uintptr_t num, char *base);
+int		ft_puthexa(unsigned int num, char *base);
+int		ft_puthexa_x(const char *format, va_list args);
+int		ft_puthexa_X(const char *format, va_list args);
+int		ft_putint(const char *format, va_list args);
+int		ft_putunint(const char *format, va_list args);
 
 #endif

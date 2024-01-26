@@ -13,14 +13,16 @@
 #include "ft_printf.h"
 
 t_formats	g_list[] = {{'c', ft_putchar}, {'s', ft_putstr}, 
-{'%', ft_putpercent}, {'p', ft_putaddress}};
+{'%', ft_putpercent}, {'p', ft_putaddress}, {'x', ft_puthexa_x},
+{'X', ft_puthexa_X}, {'i', ft_putint}, {'d', ft_putint},
+{'u', ft_putunint}};
 
 static int	_check_specifier(char c)
 {
 	int	i;
 
 	i = 0;
-	while (i < 4)
+	while (i < 9)
 	{
 		if (c == g_list[i].spec)
 			return (i);
@@ -54,5 +56,6 @@ int	ft_printf(const char *format, ...)
 		}
 		i++;
 	}
+	va_end(args);
 	return (len);
 }
