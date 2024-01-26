@@ -53,9 +53,9 @@ int	main()
 	// int a = printf("%x", -2147483648);
 	// ft_puthexa2(-2147483648, "0123456789abcdef");
 	// int b = printf("\n %x \n", -2147483648);
-	int a = ft_printf("%d", -0x81);
+	int a = ft_printf("%d%s%u%i%c%%%q%s", 217483647, NULL, -2147483648, -2147483648, 'Z', "yo");
 	write(1, "\n", 1);
-	int b = printf("%d", -0x81);
+	int b = printf("%d%s%u%i%c%%%q%s", 217483647, NULL, -2147483648, -2147483648, 'Z', "yo");
 	/* write(1, "\n", 1);
 	int c = ft_printf("%x", 0x81); */
 
