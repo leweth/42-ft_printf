@@ -6,7 +6,7 @@
 /*   By: mben-yah <mben-yah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 12:54:51 by mben-yah          #+#    #+#             */
-/*   Updated: 2024/01/27 17:37:09 by mben-yah         ###   ########.fr       */
+/*   Updated: 2024/01/27 19:12:09 by mben-yah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_formats	g_list[] = {{'c', ft_putchar}, {'s', ft_putstr}, 
 {'%', ft_putpercent}, {'p', ft_putaddress}, {'x', ft_puthexa_x},
-{'X', ft_puthexa_X}, {'i', ft_putint}, {'d', ft_putint},
+{'X', ft_puthexa_xup}, {'i', ft_putint}, {'d', ft_putint},
 {'u', ft_putunint}};
 
 static int	_check_specifier(char c)

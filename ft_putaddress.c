@@ -6,12 +6,11 @@
 /*   By: mben-yah <mben-yah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 17:28:28 by mben-yah          #+#    #+#             */
-/*   Updated: 2024/01/27 17:35:01 by mben-yah         ###   ########.fr       */
+/*   Updated: 2024/01/27 19:09:25 by mben-yah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
 
 static int	ft_putchar2(char c)
 {

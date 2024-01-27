@@ -6,7 +6,7 @@
 /*   By: mben-yah <mben-yah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 14:44:52 by mben-yah          #+#    #+#             */
-/*   Updated: 2024/01/25 16:21:09 by mben-yah         ###   ########.fr       */
+/*   Updated: 2024/01/27 19:12:01 by mben-yah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int		ft_putpercent(const char *format, va_list args);
 int		ft_putaddress(const char *format, va_list args);
 int		ft_puthexa(unsigned int num, char *base);
 int		ft_puthexa_x(const char *format, va_list args);
-int		ft_puthexa_X(const char *format, va_list args);
+int		ft_puthexa_xup(const char *format, va_list args);
 int		ft_putint(const char *format, va_list args);
 int		ft_putunint(const char *format, va_list args);
 

@@ -6,7 +6,7 @@
 /*   By: mben-yah <mben-yah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 18:49:57 by mben-yah          #+#    #+#             */
-/*   Updated: 2024/01/23 20:45:58 by mben-yah         ###   ########.fr       */
+/*   Updated: 2024/01/27 19:15:33 by mben-yah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int	ft_putpercent(const char *format, va_list args)
 {
 	if (format && args)
 		write(1, "%", 1);
-	return (1);	
+	return (1);
 }
