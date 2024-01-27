@@ -4,7 +4,8 @@ int		ft_puthexa_x(const char *format, va_list args)
 {
 	unsigned int	num;
 
+	num = 0;
 	if (format)
-		num = va_arg(args, unsigned int);	
+		num = va_arg(args, unsigned int);
 	return (ft_puthexa(num, "0123456789abcdef"));
 }

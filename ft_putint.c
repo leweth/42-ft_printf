@@ -27,6 +27,7 @@ int		ft_putint(const char *format, va_list args)
 {
 	int	num;
 
+	num = 0;
 	if (format)
 		num = va_arg(args, int);
 	return (__putnbr(num));

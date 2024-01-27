@@ -6,7 +6,7 @@
 /*   By: mben-yah <mben-yah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 17:28:28 by mben-yah          #+#    #+#             */
-/*   Updated: 2024/01/25 16:19:50 by mben-yah         ###   ########.fr       */
+/*   Updated: 2024/01/27 17:35:01 by mben-yah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ft_putchar2(char c)
 	return (1);
 }
 
-static int	ft_puthexa2(unsigned int num, char *base)
+static int	ft_puthexa2(uintptr_t num, char *base)
 {
 	if (num < 16)
 		return (ft_putchar2(base[num]));

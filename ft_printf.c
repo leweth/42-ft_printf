@@ -6,7 +6,7 @@
 /*   By: mben-yah <mben-yah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 12:54:51 by mben-yah          #+#    #+#             */
-/*   Updated: 2024/01/25 15:40:07 by mben-yah         ###   ########.fr       */
+/*   Updated: 2024/01/27 17:37:09 by mben-yah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int	ft_printf(const char *format, ...)
 	int		len;
 	int		i;
 
+	if (write(1, "gfg", 0) == -1)
+		return (-1);
 	va_start(args, format);
 	len = 0;
 	i = 0;

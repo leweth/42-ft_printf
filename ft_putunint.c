@@ -17,6 +17,7 @@ int		ft_putunint(const char *format, va_list args)
 {
 	unsigned int	num;
 
+	num = 0;
 	if (format)
 		num = va_arg(args, unsigned int);
 	return (__putnbr(num));
