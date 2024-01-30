@@ -6,7 +6,7 @@
 /*   By: mben-yah <mben-yah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 14:38:37 by mben-yah          #+#    #+#             */
-/*   Updated: 2024/01/23 20:45:18 by mben-yah         ###   ########.fr       */
+/*   Updated: 2024/01/30 10:49:12 by mben-yah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,5 @@ int	ft_putstr(const char *format, va_list args)
 		return (6);
 	}
 	len = __strlen(str);
-	write(1, str, len);
-	return (len);
+	return (write(1, str, len));
 }

@@ -6,32 +6,18 @@
 /*   By: mben-yah <mben-yah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 17:28:28 by mben-yah          #+#    #+#             */
-/*   Updated: 2024/01/27 19:09:25 by mben-yah         ###   ########.fr       */
+/*   Updated: 2024/01/30 11:10:31 by mben-yah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_putchar2(char c)
-{
-	write(1, &c, 1);
-	return (1);
-}
-
-static int	ft_puthexa2(uintptr_t num, char *base)
-{
-	if (num < 16)
-		return (ft_putchar2(base[num]));
-	else
-		return (ft_puthexa2(num / 16, base) + ft_puthexa2(num % 16, base));
-}
-
 int	ft_putaddress(const char *format, va_list args)
 {
 	uintptr_t	num;
 
-	num = va_arg(args, uintptr_t);
+	num = 0;
 	if (format)
-		write(1, "0x", 2);
-	return (2 + ft_puthexa2(num, "0123456789abcdef"));
+		num = va_arg(args, uintptr_t);
+	return (write(1, "0x", 2) + ft_puthexa(num, "0123456789abcdef"));
 }

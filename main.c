@@ -6,7 +6,7 @@
 #include <stdint.h>
 #include <limits.h>
 
-static int count()
+/* static int count()
 {
 	static int i = 0;
 
@@ -15,7 +15,7 @@ static int count()
 		return (i);
 	else
 		return (count());
-}/* 
+} *//* 
 static void	ft_putchar2(char c)
 {
 	write(1, &c, 1);
@@ -53,15 +53,18 @@ int	main()
 	// int a = printf("%x", -2147483648);
 	// ft_puthexa2(-2147483648, "0123456789abcdef");
 	// int b = printf("\n %x \n", -2147483648);
-	/* int a = ft_printf("%d%s%u%i%c%%%q%s", 217483647, NULL, -2147483648, -2147483648, 'Z', "yo");
+/* 	int a = ft_printf("%d%s%u%i%c%%%%%s", 217483647, NULL, -2147483648, -2147483648, 'Z', "yo");
 	write(1, "\n", 1);
-	int b = printf("%d%s%u%i%c%%%q%s", 217483647, NULL, -2147483648, -2147483648, 'Z', "yo");
-
-	printf("\n%d-------------%d-------------d\n", a, b); */
-
-	int a = ft_printf(" %p %p ", LONG_MIN, LONG_MAX);
-	printf("\n");
-	int b = printf(" %p %p ", LONG_MIN, LONG_MAX);	
+	int b = printf("%d%s%u%i%c%%%%%s", 217483647, NULL, -2147483648, -2147483648, 'Z', "yo");
 
 	printf("\n%d-------------%d-------------d\n", a, b);
-}
+ */
+
+ 	int a = ft_printf("%x", 27);
+	printf("\n");
+	int b = printf("%x", 27);
+
+	printf("\n%d-------------%d\n", a, b);
+
+
+} 

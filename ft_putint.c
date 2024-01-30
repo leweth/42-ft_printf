@@ -6,7 +6,7 @@
 /*   By: mben-yah <mben-yah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 19:13:55 by mben-yah          #+#    #+#             */
-/*   Updated: 2024/01/27 19:15:13 by mben-yah         ###   ########.fr       */
+/*   Updated: 2024/01/30 10:48:42 by mben-yah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 static int	ft_putchar2(char c)
 {
-	write(1, &c, 1);
-	return (1);
+	return (write(1, &c, 1));
 }
 
 static int	__putnbr(int n)

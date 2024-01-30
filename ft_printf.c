@@ -6,7 +6,7 @@
 /*   By: mben-yah <mben-yah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 12:54:51 by mben-yah          #+#    #+#             */
-/*   Updated: 2024/01/27 19:12:09 by mben-yah         ###   ########.fr       */
+/*   Updated: 2024/01/30 11:13:25 by mben-yah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ int	ft_printf(const char *format, ...)
 	int		len;
 	int		i;
 
-	if (write(1, "gfg", 0) == -1)
-		return (-1);
 	va_start(args, format);
 	len = 0;
 	i = 0;
@@ -52,10 +50,7 @@ int	ft_printf(const char *format, ...)
 		else if (format[i] == '%' && _check_specifier(format[i + 1]) > -1)
 			len += g_list[_check_specifier(format[i++ + 1])].f(format, args);
 		else
-		{
-			write(1, format + i, 1);
-			len++;
-		}
+			len += write(1, format + i, 1);
 		i++;
 	}
 	va_end(args);
